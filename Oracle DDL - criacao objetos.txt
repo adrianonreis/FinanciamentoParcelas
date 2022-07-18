@@ -1,0 +1,150 @@
+create table Cliente
+(
+  idCliente integer,
+  Nome      varchar(50),
+  CPF       varchar(11),
+  UF        varchar(2),
+  Celular   varchar(15)
+);
+
+create table Financiamento
+(
+  idFinanciamento integer,
+  CPF             varchar(11),
+  Tipo            integer,
+  ValorTotal      number(8,2),
+  DataUltimoVenc  date
+);
+
+create table Parcela
+(
+  idparcela       integer,
+  idFinanciamento integer,
+  Numero          integer,
+  Valor           number(8,2),
+  DataVenc        date,
+  DataPagto       date
+);
+
+----------------------------
+insert into cliente
+values (1, 'Adriano Reis', '65665961272', 'AM', '(92)99601-2816');
+insert into cliente
+values (2, 'Cristina Reis', '78224231201', 'AM', '(92)99999-2222');
+insert into cliente
+values (3, 'Heitor Reis', '12345678901', 'AM', '(92)99999-3333');
+insert into cliente
+values (4, 'Rejeane', '23456789012', 'AM', '(92)99999-4444');
+insert into cliente
+values (5, 'Socorro', '34567890123', 'AM', '(92)99999-5555');
+----------------------------
+insert into cliente
+values (11, 'Cliente SP 1', '11111111111', 'SP', '(92)99999-1116');
+insert into cliente
+values (22, 'Cliente SP 2', '22222222222', 'SP', '(92)99999-2216');
+insert into cliente
+values (33, 'Cliente SP 3', '33333333333', 'SP', '(92)99999-3316');
+
+----------------------------
+insert into Financiamento
+values(1, '65665961272', 1, 1000, to_date('15/12/2022', 'dd/mm/rrrr') );
+insert into Financiamento
+values(2, '11111111111', 1, 1750, to_date('21/01/2023', 'dd/mm/rrrr') );
+
+insert into Financiamento
+values(6, '11111111111', 1, 1288, to_date('18/09/2023', 'dd/mm/rrrr') );
+insert into Financiamento
+values(7, '11111111111', 1, 3211, to_date('02/03/2026', 'dd/mm/rrrr') );
+----------------------------
+insert into Financiamento
+values(3, '34567890123', 1, 3680, to_date('29/05/2025', 'dd/mm/rrrr') );
+----------------------------
+insert into Financiamento
+values(4, '33333333333', 1, 4230, to_date('11/08/2030', 'dd/mm/rrrr') );
+----------------------------
+insert into Financiamento
+values(5, '78224231201', 1, 2177, to_date('19/08/2030', 'dd/mm/rrrr') );
+
+----------------------------
+insert into parcela
+values(1004, 1, 1, 32, to_date('08/04/2022', 'dd/mm/rrrr'), to_date('08/04/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1005, 1, 2, 32, to_date('08/05/2022', 'dd/mm/rrrr'), to_date('08/05/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1006, 1, 3, 32, to_date('08/06/2022', 'dd/mm/rrrr'), to_date('08/06/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1007, 1, 4, 32, to_date('08/07/2022', 'dd/mm/rrrr'), to_date('08/07/2022', 'dd/mm/rrrr') );
+
+----------------------------
+insert into parcela
+values(1000, 2, 1, 100, to_date('11/04/2022', 'dd/mm/rrrr'), to_date('11/04/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1001, 2, 2, 100, to_date('11/05/2022', 'dd/mm/rrrr'), to_date('11/05/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1002, 2, 3, 100, to_date('11/06/2022', 'dd/mm/rrrr'), to_date('16/06/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1003, 2, 4, 100, to_date('11/07/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(1110, 6, 1, 123, to_date('11/04/2022', 'dd/mm/rrrr'), to_date('11/04/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1111, 6, 2, 123, to_date('11/05/2022', 'dd/mm/rrrr'), to_date('11/05/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1112, 6, 3, 123, to_date('11/06/2022', 'dd/mm/rrrr'), to_date('16/06/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1113, 6, 4, 123, to_date('11/07/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(1112, 7, 1, 434, to_date('03/06/2022', 'dd/mm/rrrr'), null );
+insert into parcela
+values(1113, 7, 2, 434, to_date('03/07/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(1008, 3, 1, 527, to_date('10/05/2022', 'dd/mm/rrrr'), to_date('10/05/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1009, 3, 2, 527, to_date('10/06/2022', 'dd/mm/rrrr'), to_date('10/06/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1010, 3, 3, 527, to_date('10/07/2022', 'dd/mm/rrrr'), to_date('10/07/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1011, 3, 4, 527, to_date('10/08/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(1012, 4, 1, 432, to_date('07/04/2022', 'dd/mm/rrrr'), to_date('05/04/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1013, 4, 2, 432, to_date('07/05/2022', 'dd/mm/rrrr'), to_date('17/05/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1014, 4, 3, 432, to_date('07/06/2022', 'dd/mm/rrrr'), to_date('07/07/2022', 'dd/mm/rrrr') );
+insert into parcela
+values(1015, 4, 4, 432, to_date('07/07/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(1016, 5, 1, 662, to_date('01/08/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+
+create view vw_financiamento as
+select cliente.idCliente, cliente.Nome, cliente.CPF, cliente.UF, cliente.Celular,
+       financiamento.idFinanciamento, financiamento.Tipo, financiamento.ValorTotal, financiamento.DataUltimoVenc
+     , (select count(*)
+          from parcela
+         where parcela.idFinanciamento = financiamento.idFinanciamento
+       )  totalparcelas
+     , (select count(*)
+          from parcela
+         where parcela.idFinanciamento = financiamento.idFinanciamento
+           and parcela.DataPagto is not null
+       )  parcelasPagas
+     , (select count(*)
+          from parcela
+         where parcela.idFinanciamento = financiamento.idFinanciamento
+           and trunc(parcela.DataVenc) +5 <= sysdate
+           and parcela.DataPagto is null
+       )  parcelas_mais_5d_atraso
+  from cliente, financiamento
+ where cliente.cpf = financiamento.cpf;
+

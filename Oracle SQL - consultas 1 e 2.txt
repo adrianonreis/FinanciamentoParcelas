@@ -1,0 +1,24 @@
+select --*
+       distinct idcliente, nome, cpf, uf, celular
+  from vw_financiamento
+ where uf = 'SP'
+   and case when totalparcelas <> 0
+            then (parcelaspagas / totalparcelas) 
+            else 0
+       end >= 0.6
+ order by nome;
+
+select * from 
+( 
+  --este nível garante que a ordem original será respeitada
+  select rownum as linha,
+         idcliente, nome, cpf, uf, celular 
+    from
+    (
+      select distinct idcliente, nome, cpf, uf, celular 
+        from vw_financiamento
+       where parcelas_mais_5d_atraso > 0
+    )
+  )
+  where linha <= 1
+  
