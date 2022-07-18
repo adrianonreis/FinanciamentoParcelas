@@ -73,7 +73,7 @@ values(1005, 1, 2, 32, to_date('08/05/2022', 'dd/mm/rrrr'), to_date('08/05/2022'
 insert into parcela
 values(1006, 1, 3, 32, to_date('08/06/2022', 'dd/mm/rrrr'), to_date('08/06/2022', 'dd/mm/rrrr') );
 insert into parcela
-values(1007, 1, 4, 32, to_date('08/07/2022', 'dd/mm/rrrr'), to_date('08/07/2022', 'dd/mm/rrrr') );
+values(1007, 1, 4, 32, to_date('08/07/2022', 'dd/mm/rrrr'), null );
 
 ----------------------------
 insert into parcela
@@ -107,7 +107,7 @@ values(1008, 3, 1, 527, to_date('10/05/2022', 'dd/mm/rrrr'), to_date('10/05/2022
 insert into parcela
 values(1009, 3, 2, 527, to_date('10/06/2022', 'dd/mm/rrrr'), to_date('10/06/2022', 'dd/mm/rrrr') );
 insert into parcela
-values(1010, 3, 3, 527, to_date('10/07/2022', 'dd/mm/rrrr'), to_date('10/07/2022', 'dd/mm/rrrr') );
+values(1010, 3, 3, 527, to_date('10/07/2022', 'dd/mm/rrrr'), null );
 insert into parcela
 values(1011, 3, 4, 527, to_date('10/08/2022', 'dd/mm/rrrr'), null );
 
