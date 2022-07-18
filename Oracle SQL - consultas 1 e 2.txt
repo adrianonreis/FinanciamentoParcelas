@@ -20,5 +20,5 @@ select * from
        where parcelas_mais_5d_atraso > 0
     )
   )
-  where linha <= 1
+  where linha <= 4
   
