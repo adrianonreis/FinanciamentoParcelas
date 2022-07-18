@@ -147,4 +147,3 @@ select cliente.idCliente, cliente.Nome, cliente.CPF, cliente.UF, cliente.Celular
        )  parcelas_mais_5d_atraso
   from cliente, financiamento
  where cliente.cpf = financiamento.cpf;
-
