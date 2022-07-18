@@ -41,7 +41,7 @@ values (5, 'Socorro', '34567890123', 'AM', '(92)99999-5555');
 insert into cliente
 values (11, 'Cliente SP 1', '11111111111', 'SP', '(92)99999-1116');
 insert into cliente
-values (22, 'Cliente SP 2', '22222222222', 'SP', '(92)99999-2216');
+values (22, 'Cliente SP 2', '22222222222', 'RJ', '(92)99999-2216');
 insert into cliente
 values (33, 'Cliente SP 3', '33333333333', 'SP', '(92)99999-3316');
 
@@ -64,6 +64,9 @@ values(4, '33333333333', 1, 4230, to_date('11/08/2030', 'dd/mm/rrrr') );
 ----------------------------
 insert into Financiamento
 values(5, '78224231201', 1, 2177, to_date('19/08/2030', 'dd/mm/rrrr') );
+
+insert into Financiamento
+values(8, '22222222222', 1, 1920, to_date('05/07/2024', 'dd/mm/rrrr') );
 
 ----------------------------
 insert into parcela
@@ -124,6 +127,10 @@ values(1015, 4, 4, 432, to_date('07/07/2022', 'dd/mm/rrrr'), null );
 ----------------------------
 insert into parcela
 values(1016, 5, 1, 662, to_date('01/08/2022', 'dd/mm/rrrr'), null );
+
+----------------------------
+insert into parcela
+values(2900, 8, 1, 982, to_date('01/06/2022', 'dd/mm/rrrr'), null );
 
 ----------------------------
 

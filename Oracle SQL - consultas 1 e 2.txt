@@ -1,5 +1,5 @@
-select --*
-       distinct idcliente, nome, cpf, uf, celular
+select distinct idcliente, nome, cpf, uf, celular
+      -- , totalparcelas, parcelaspagas
   from vw_financiamento
  where uf = 'SP'
    and case when totalparcelas <> 0
@@ -15,7 +15,8 @@ select * from
          idcliente, nome, cpf, uf, celular 
     from
     (
-      select distinct idcliente, nome, cpf, uf, celular 
+      select distinct idcliente, nome, cpf, uf, celular
+          -- , parcelas_mais_5d_atraso
         from vw_financiamento
        where parcelas_mais_5d_atraso > 0
     )
