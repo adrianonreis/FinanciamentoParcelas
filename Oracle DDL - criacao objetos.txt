@@ -41,9 +41,9 @@ values (5, 'Socorro', '34567890123', 'AM', '(92)99999-5555');
 insert into cliente
 values (11, 'Cliente SP 1', '11111111111', 'SP', '(92)99999-1116');
 insert into cliente
-values (22, 'Cliente SP 2', '22222222222', 'RJ', '(92)99999-2216');
+values (22, 'Cliente RJ 1', '22222222222', 'RJ', '(92)99999-2216');
 insert into cliente
-values (33, 'Cliente SP 3', '33333333333', 'SP', '(92)99999-3316');
+values (33, 'Cliente SP 2', '33333333333', 'SP', '(92)99999-3316');
 
 ----------------------------
 insert into Financiamento
